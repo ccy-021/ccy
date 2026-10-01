@@ -1,0 +1,13 @@
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import { BriefcaseBusiness, CalendarDays, MapPin, ArrowUpRight } from 'lucide-react';
+import { useApp } from '@/lib/store';
+import { STUDENT_ID } from '@/lib/data';
+import { statusLabels, statusTabs } from '@/lib/status';
+import type { ApplicationStatus } from '@/lib/types';
+import { dateLabel } from '@/lib/utils';
+import { JobLogo } from '@/components/job-card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+export default function ApplicationsPage() { const { jobs, applications, ready } = useApp(); const [tab, setTab] = useState<ApplicationStatus | 'all'>('all'); const mine = applications.filter(a => a.studentId === STUDENT_ID); const visible = mine.filter(a => tab === 'all' || a.status === tab); return <main className="page-shell inner-page"><div className="page-intro"><div className="eyebrow"><BriefcaseBusiness size={15}/>每一份尝试，都值得期待</div><h1>我的报名</h1><p>你的周末计划，都在这里。及时查看商家的确认进度。</p></div><div className="tabs" role="tablist" aria-label="报名状态">{[{ key: 'all' as const, label: '全部报名' },...statusTabs].map(item => <button role="tab" aria-selected={tab === item.key} className={`tab ${tab === item.key ? 'selected' : ''}`} key={item.key} onClick={() => setTab(item.key)}>{item.label}<span>{item.key === 'all' ? mine.length : mine.filter(a => a.status === item.key).length}</span></button>)}</div>{!ready ? <div className="loading-state">正在加载报名记录…</div> : visible.length ? <div className="application-list">{visible.map(application => { const job = jobs.find(j => j.id === application.jobId); if (!job) return null; return <article className="panel application-card" key={application.id}><JobLogo job={job}/><div className="application-main"><Link href={`/jobs/${job.id}`}><h3>{job.title}</h3></Link><p>{job.business}</p><div className="application-info"><span><CalendarDays/>{dateLabel(job.date)} {job.startTime}–{job.endTime}</span><span><MapPin/>{job.location}</span></div></div><div className="application-side"><Badge className={`status-${application.status}`}>{statusLabels[application.status]}</Badge><div className="salary"><span className="currency">¥</span>{job.salary}<span className="salary-unit">/ 小时</span></div><Link href={`/jobs/${job.id}`} className="back-link mb-0">查看详情<ArrowUpRight size={13}/></Link></div></article>; })}</div> : <div className="empty-state"><BriefcaseBusiness size={42}/><h3>{tab === 'all' ? '周末的新收获，从第一份报名开始' : '这个分类下还没有报名'}</h3><p>去看看附近的机会，总有一份兼职适合你的周末。</p><Button asChild><Link href="/">发现适合我的兼职<ArrowUpRight size={16}/></Link></Button></div>}</main>; }

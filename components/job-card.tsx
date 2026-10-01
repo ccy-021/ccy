@@ -1,0 +1,10 @@
+'use client';
+import Link from 'next/link';
+import { ArrowUpRight, CalendarDays, MapPin, Star, Coffee, CupSoda, Utensils, Ticket, BookOpen, Megaphone, Camera, Package, PawPrint, Clock3 } from 'lucide-react';
+import type { Job } from '@/lib/types';
+import { dateLabel } from '@/lib/utils';
+import { matchJob, defaultPreferences } from '@/lib/matching';
+import { useApp } from '@/lib/store';
+export const jobIcons = { tea: CupSoda, food: Utensils, event: Ticket, book: BookOpen, megaphone: Megaphone, camera: Camera, box: Package, coffee: Coffee, pet: PawPrint };
+export function JobLogo({ job, large = false }: { job: Job; large?: boolean }) { const Icon = jobIcons[job.icon]; return <div className={`job-logo ${job.color} ${large ? 'large' : ''}`}><Icon size={large ? 32 : 25} strokeWidth={1.7}/></div>; }
+export function JobCard({ job, score, reasons }: { job: Job; score?: number; reasons?: string[] }) { const { remaining } = useApp(); const match = score ?? matchJob(job, defaultPreferences).score; return <article className="job-card"><div className="job-card-top"><JobLogo job={job}/><span className="match-badge"><span className="match-dot"/>{match}% 匹配</span></div><Link href={`/jobs/${job.id}`} className="job-title">{job.title}</Link><div className="business-name">{job.business}<span><Star size={12} fill="currentColor"/>{job.rating.toFixed(1)}</span></div><div className="salary"><span className="currency">¥</span>{job.salary}<span className="salary-unit">/ 小时</span><span className="category-tag">{job.category}</span></div><div className="job-meta"><span><CalendarDays/>{dateLabel(job.date)}</span><span><Clock3/>{job.startTime}–{job.endTime}</span><span><MapPin/>距学校 {job.distance} km<span className="meta-dot">·</span>{job.distance <= 1 ? '步行可达' : '通勤方便'}</span></div>{reasons && <div className="match-reasons">{reasons.map(reason => <span key={reason}>✓ {reason}</span>)}</div>}<div className="job-card-bottom"><span>{remaining(job) ? <>还需 <b>{remaining(job)}</b> 人<span className="small-dot">·</span>欢迎大学生</> : '本次招聘已满'}</span><Link href={`/jobs/${job.id}`}>查看详情<ArrowUpRight size={16}/></Link></div></article>; }

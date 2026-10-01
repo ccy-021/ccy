@@ -1,0 +1,38 @@
+<svg width="580" height="380" viewBox="0 0 580 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="321" cy="333" rx="208" ry="20" fill="#d9e6d9"/>
+<path d="M182 321V150c0-70 57-127 127-127s127 57 127 127v171" fill="#dbe7d7"/>
+<path d="M155 324V170c0-64 55-115 123-115s123 51 123 115v154" stroke="#bdd0be" stroke-dasharray="4 7"/>
+<path d="M347 57l9-16M369 69l17-8M330 49V32" stroke="#edab58" stroke-width="4" stroke-linecap="round"/>
+<path d="M91 320h43l-4-50H96l-5 50Z" fill="#dc8d5e"/><path d="M112 278v-63" stroke="#345e49" stroke-width="5"/><path d="M112 254c-37-2-39-38-26-41 17-3 26 22 26 41ZM113 238c31-3 36-34 23-36-14-2-23 22-23 36ZM112 219c-23-6-27-28-17-32 11-4 18 18 17 32Z" fill="#587e5a"/>
+<rect x="245" y="111" width="224" height="209" rx="6" fill="#fffaf0"/>
+<rect x="262" y="148" width="189" height="132" rx="2" fill="#345b4d"/>
+<rect x="271" y="158" width="113" height="85" fill="#c6d8c5"/><path d="M274 238l72-77M320 240l59-62" stroke="#e9efe0" stroke-width="9"/>
+<rect x="395" y="159" width="46" height="121" fill="#75917a"/>
+<circle cx="432" cy="220" r="3" fill="#fae9bd"/>
+<rect x="265" y="254" width="125" height="10" rx="3" fill="#c5a783"/>
+<path d="M236 137h241l-19-45H253l-17 45Z" fill="#42745d"/>
+<path d="M269 92h28l-6 45h-32l10-45ZM325 92h28v45h-31l3-45ZM381 92h28l6 45h-31l-3-45ZM437 92h21l19 45h-32l-8-45Z" fill="#f5f0dc"/>
+<path d="M236 137h32v7c0 18-32 18-32 0v-7ZM297 137h31v7c0 18-31 18-31 0v-7ZM357 137h31v7c0 18-31 18-31 0v-7ZM417 137h30v7c0 18-30 18-30 0v-7Z" fill="#42745d"/>
+<path d="M268 137h29v7c0 18-29 18-29 0v-7ZM328 137h29v7c0 18-29 18-29 0v-7ZM388 137h29v7c0 18-29 18-29 0v-7ZM447 137h30v7c0 18-30 18-30 0v-7Z" fill="#f5f0dc"/>
+<rect x="288" y="66" width="137" height="33" rx="6" fill="#f7eedb" stroke="#345b4d" stroke-width="2"/>
+<text x="356" y="87" text-anchor="middle" fill="#345b4d" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="4">WEEKEND</text>
+<path d="M309 248v-24h17v24" fill="#edb26c"/><path d="M307 225h21M316 224v-10" stroke="#fcf9ee" stroke-width="3"/><path d="M350 249v-20h17v20" fill="#f1efdf"/><path d="M368 232c14-2 13 13 0 12" stroke="#f1efdf" stroke-width="4"/>
+<path d="M188 229l-10 88h18l22-63 9 63h19l-2-96-56 8Z" fill="#264e42"/>
+<path d="M176 313l-7 12c-2 4 2 7 7 7h27v-15l-27-4ZM226 316v16h34c3-8-10-10-15-17l-19 1Z" fill="#f9f5e9" stroke="#264e42" stroke-width="2"/>
+<path d="M180 160c5-8 14-11 33-9 16 1 23 10 27 23l6 51c-16 14-50 16-65 3l-1-68Z" fill="#edac57"/>
+<path d="M181 165l-18 42 14 10 19-32M235 166l21 31 27-10 6 12-35 18c-5 2-9-1-13-6l-18-24" fill="#edac57"/>
+<path d="M202 146v15c5 5 14 5 18-1v-19" fill="#ce8f66"/>
+<path d="M190 121c-1-17 12-24 25-20 20 5 18 21 12 36-4 11-15 16-24 9-8-6-12-15-13-25Z" fill="#e5ab7d"/>
+<path d="M189 130c-16-13-7-39 13-41 24-3 37 17 26 32-5-4-7-11-8-14-4 12-16 11-20 11l-1 18-10-6Z" fill="#283e32"/>
+<path d="M200 129c-3-8-11-8-10-1 0 5 5 7 9 8" fill="#e5ab7d"/>
+<path d="M199 162l-5 48M220 163l11 42" stroke="#fcdb99" stroke-width="3"/>
+<path d="M195 180h33l7 50h-46l6-50Z" fill="#f7e3bc"/><path d="M206 195c8-10 19 2 8 9-11-7 0-19 8-9" stroke="#659275" stroke-width="2"/>
+<path d="M282 188c10-8 17-3 12 3l-7 8-5-11Z" fill="#e5ab7d"/>
+<rect x="279" y="170" width="17" height="21" rx="3" fill="#f9f3e5"/><path d="M296 175c12-3 12 12 0 10" stroke="#f9f3e5" stroke-width="4"/>
+<path d="M284 161c-7-8 6-9 1-16" stroke="#84a08a" stroke-width="2" stroke-linecap="round"/>
+<rect x="403" y="271" width="55" height="53" rx="4" transform="rotate(8 403 271)" fill="#caa875"/><rect x="409" y="278" width="43" height="34" rx="2" transform="rotate(8 409 278)" fill="#365e4b"/>
+<text x="428" y="297" text-anchor="middle" transform="rotate(8 428 297)" fill="#f4edda" font-family="Arial" font-size="10">HELLO</text>
+<path d="M477 314c-8-22 1-35 8-28 4 3 1 11 0 13 11-18 23-15 19-5-3 8-16 15-27 20Z" fill="#668768"/>
+<path d="M135 110l4-12 4 12 12 4-12 4-4 12-4-12-12-4 12-4Z" fill="#e7b46b"/>
+<circle cx="459" cy="58" r="5" fill="#93b197"/>
+</svg>

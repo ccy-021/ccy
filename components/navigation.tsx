@@ -1,0 +1,7 @@
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { ArrowUpRight, Compass, Sparkles, Store, BriefcaseBusiness } from 'lucide-react';
+import { cn } from '@/lib/utils';
+export function Navigation() { const pathname = usePathname(); return <header className="header"><div className="nav-inner"><Link href="/" className="brand" aria-label="WeekendGo 首页"><span className="brand-mark"><ArrowUpRight strokeWidth={3} size={24}/></span><span>Weekend<span className="brand-go">Go</span><small>周末搭子</small></span></Link><nav aria-label="主导航"><Link className={cn('nav-link', pathname === '/' || pathname.startsWith('/jobs') ? 'active' : '')} href="/"><Compass size={17}/>找兼职</Link><Link className={cn('nav-link', pathname === '/match' && 'active')} href="/match"><Sparkles size={17}/>AI 智能匹配<span className="new-badge">NEW</span></Link><Link className={cn('nav-link', pathname === '/applications' && 'active')} href="/applications"><BriefcaseBusiness size={17}/>我的报名</Link></nav><Link className={cn('merchant-link', pathname.startsWith('/business') && 'selected')} href="/business"><Store size={17}/><span>商家中心</span><ArrowUpRight size={15}/></Link><div className="avatar" title="顾同学 · 演示账号">顾</div></div></header>; }
+export function Footer() { return <footer className="footer"><Link href="/" className="footer-brand">WeekendGo<span>周末搭子</span></Link><p>让每个周末，都有一点新收获。</p><span className="demo-note">校园兼职体验版 · 数据保存在当前浏览器</span></footer>; }
